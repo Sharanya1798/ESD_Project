@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Admission</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/form-validation.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<div class="container">
+    <div class="py-5 text-center">
+        <h2>Student Admission</h2>
+    </div>
+
+    <div class="col-md-12 order-md-3">
+        <h4 class="mb-3">Student Details</h4>
+        <form class="needs-validation-students" id="student-validation" novalidate>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="first_name">First name</label>
+                    <input class="form-control" id="first_name" placeholder="" required type="text" value="">
+                    <div class="invalid-feedback">
+                        Valid first name is required.
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="last_name">Last name</label>
+                    <input class="form-control" id="last_name" placeholder="" required type="text" value="">
+                    <div class="invalid-feedback">
+                        Valid last name is required.
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="email">Email</label>
+                <input class="form-control" id="email" placeholder="you@example.com" required type="email">
+                <div class="invalid-feedback">
+                    Please enter a valid email address for updates.
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label for="domain">Domain</label>
+                    <select class="custom-select d-block w-100" id="domain" required>
+                        <option value="">Choose...</option>
+
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid domain.
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="specialization">Specialization</label>
+                    <select class="custom-select d-block w-100" id="specialization" required>
+                        <option value="">Choose...</option>
+                        <option value = "cs">Computer Science</option>
+                        <option value = "ec">Electronics & Communications</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please select a valid specialization.
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <label for="grad_year">Graduation year</label>
+                    <select class="custom-select d-block w-100" id="grad_year" required>
+                        <option value="">Choose...</option>
+                        <option value = "2020">2020</option>
+                        <option value = "2021">2021</option>
+                        <option value = "2022">2022</option>
+                        <option value = "2023">2023</option>
+                        <option value = "2024">2024</option>
+                        <option value = "2025">2025</option>
+                        <option value = "2026">2026</option>
+                        <option value = "2027">2027</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please select a valid graduation year.
+                    </div>
+                </div>
+            </div>
+            <div>
+            <hr class="mb-4">
+                <button class="btn btn-primary btn-lg btn-block" type="submit">Register</button>
+            </div>
+            <div class="alert alert-warning" role="alert" id="login-alert" style="display: none; margin-top: 20px">
+                Duplicate Email Address!!
+            </div>
+            <div class="alert alert-success" role="alert" id="login-success" style="display: none; margin-top: 20px">
+                Details saved successfully!!
+            </div>
+            <div class="alert alert-warning" role="alert" id="capacity-exceeded" style="display: none; margin-top: 20px">
+                YOU ARE LATE!! slots for this domain have already filled!!
+            </div>
+        </form>
+    </div>
+    <div class="py-5 text-center">
+        <div class="col-md-4 order-md-1" >
+            <div class = "row">
+                <div class="card"  style="width: 15rem;">
+                    <img alt="No Image" class="card-img-top" src="assets/photos/avatar.png" id="avatar-image" width="150" height="150">
+                    <div class="card-body">
+                        <h5 class="card-title">Image Upload</h5>
+                        <form >
+                            <div class="form-group">
+                                <input class="form-control-file" accept="image/*" id="image-data" type="file">
+                                <button type="button" class="btn btn-info"
+                                        style="margin-top: 5px; align-content: center" onclick="imageUpload()">Upload</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="alert alert-success" role="alert" id="upload-success" style="display: none; margin-top: 20px">
+                    <h3 >Photo saved successfully!! </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="my-5 pt-5 text-muted text-center text-small">
+</footer>
+</body>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/form-validation.js"></script>
+</html>
